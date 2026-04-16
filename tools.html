@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: #000;
+    }
+
+    header.header {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    header.header .navbar {
+      background: rgba(8, 27, 41, 0.75) !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      border-radius: 45px !important;
+      padding: 8px 22px !important;
+      margin: 10px auto !important;
+      width: min(980px, 94%) !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      z-index: 1001;
+    }
+
+    .services {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      padding-top: 100px;
+      overflow: hidden;
+      margin: 0;
+      background: transparent;
+    }
+
+    .services .video-wrap,
+    .services .background-video,
+    .services .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      z-index: -2;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    .services .background-video {
+      object-fit: cover;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -3;
+    }
+
+    .services .video-overlay {
+      background: transparent !important;
+      z-index: -2;
+    }
+
+    .services-container,
+    .services .heading,
+    main {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+  <title>Tools - Portfolio</title>
+</head>
+<body>
+  <div class="cursor-follower"></div>
+  <header class="header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index1.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="tools.html">Tools</a>
+      <a href="services.html">Services</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="services" id="services">
+      <h2 class="heading">Used Tools</h2>
+      <div class="video-wrap">
+        <video autoplay loop muted playsinline class="background-video" poster="poster-tools.jpg">
+          <source src="Used tool .mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay" aria-hidden="true"></div>
+      </div>
+      <div class="services-container">
+
+        <a href="https://nmap.org" target="_blank" class="service-link">
+          <div class="services-box">
+            <img src="Nmap.jpeg" class="service-logo">
+            <h3>Nmap</h3>
+            <p>Nmap is a powerful network scanning and security auditing tool. It's used to discover devices, open ports, and running services on a network.</p>
+          </div>
+        </a>
+
+        <a href="https://www.metasploit.com" target="_blank" class="service-link">
+          <div class="services-box">
+            <img src="Metasploit.png" class="service-logo">
+            <h3>Metasploit</h3>
+            <p>Metasploit a penetration-testing framework for running exploits and payloads. Use only on systems you own or have permission to test.</p>
+          </div>
+        </a>
+
+        <a href="https://portswigger.net/burp" target="_blank" class="service-link">
+          <div class="services-box">
+            <img src="Burpsuite.png" class="service-logo">
+            <h3>Burp Suite</h3>
+            <p>Burp Suite an integrated web-application security testing toolkit (proxy, scanner, repeater) used to intercept, analyze, and exploit HTTP/S traffic.</p>
+          </div>
+        </a>
+
+        <a href="https://www.tenable.com/products/nessus" target="_blank" class="service-link">
+          <div class="services-box">
+            <img src="Nessus.jpeg" class="service-logo">
+            <h3>Nessus</h3>
+            <p>Nessus a vulnerability scanner that detects missing patches, misconfigurations, and known CVEs use only on systems you own or are authorized to test.</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/vanhauser-thc/thc-hydra" target="_blank" class="service-link">
+          <div class="services-box">
+            <img src="Hydra.svg" class="service-logo">
+            <h3>Hydra</h3>
+            <p>Hydra a fast parallelized login-brute-force tool for testing password strength against services (SSH, FTP, HTTP forms, etc.). Use only on systems you own or are authorized to test.</p>
+          </div>
+        </a>
+
+        <a href="https://www.wireshark.org" target="_blank" class="service-link">
+          <div class="services-box">
+            <img src="Wireshark.png" class="service-logo">
+            <h3>Wireshark</h3>
+            <p>Wireshark a GUI packet analyzer that captures and inspects network traffic (packets) for troubleshooting, protocol analysis, and forensic investigation.</p>
+          </div>
+        </a>
+
+        <a href="https://hashcat.net/hashcat/" target="_blank" class="service-link">
+          <div class="services-box">
+            <img src="Hashcat.png" class="service-logo">
+            <h3>Hashcat</h3>
+            <p>Hashcat: a high-performance password-recovery and cracking tool that uses CPU/GPU acceleration to brute-force or use wordlists against hashed passwords (MD5, bcrypt, NTLM, etc.).</p>
+          </div>
+        </a>
+
+        <a href="https://www.autopsy.com" target="_blank" class="service-link">
+          <div class="services-box">
+            <img src="Autopsy.png" class="service-logo">
+            <h3>Autopsy</h3>
+            <p>Autopsy: a graphical digital-forensics platform for analyzing disk images, recovering files, and investigating timestamps/artifacts during incident response use only on systems/images you have authorization to examine.</p>
+          </div>
+        </a>
+
+        <a href="https://www.aircrack-ng.org" target="_blank" class="service-link">
+          <div class="services-box">
+            <img src="Aircrack.png" class="service-logo">
+            <h3>Aircrack-ng</h3>
+            <p>Aircrack-ng a suite for auditing WiFi: capture packets, extract handshakes, and crack WEP/WPA/WPA2 PSKs using wordlists/GPU acceleration.</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/trustedsec/social-engineer-toolkit" target="_blank" class="service-link">
+          <div class="services-box">
+            <img src="Setool.png" class="service-logo">
+            <h3>SET Toolkit</h3>
+            <p>SET an open-source framework for automating social-engineering attacks (phishing, credential harvesting, payload delivery) to test human vectors.</p>
+          </div>
+        </a>
+
+        <a href="https://www.maltego.com" target="_blank" class="service-link">
+          <div class="services-box">
+            <img src="maltego-light.png" class="service-logo">
+            <h3>Maltego</h3>
+            <p>Maltego an open-source intelligence (OSINT) and forensics application that provides data mining and link analysis for gathering information about people, companies, domains, and infrastructure.</p>
+          </div>
+        </a>
+
+        <a href="https://www.zaproxy.org" target="_blank" class="service-link">
+          <div class="services-box">
+            <img src="owasp-zap.png" class="service-logo">
+            <h3>OWASP ZAP</h3>
+            <p>OWASP ZAP a leading open-source web application security testing tool that provides automated scanning and manual testing capabilities for identifying vulnerabilities in web applications.</p>
+          </div>
+        </a>
+
+        <a href="https://sqlmap.org" target="_blank" class="service-link">
+          <div class="services-box">
+            <img src="Sqlmap_logo.png" class="service-logo">
+            <h3>SQLMap</h3>
+            <p>SQLMap an open-source penetration-testing framework for automating SQL injection attacks and database takeover.</p>
+          </div>
+        </a>
+
+        <a href="https://www.kali.org/tools/john/" target="_blank" class="service-link">
+          <div class="services-box">
+            <img src="John.jpg" class="service-logo">
+            <h3>John the Ripper</h3>
+            <p>John the Ripper a fast and flexible password recovery tool that supports various hash formats and can be used for both offensive and defensive purposes.</p>
+          </div>
+        </a>
+
+        <a href="https://www.kali.org/tools/nikto/" target="_blank" class="service-link">
+          <div class="services-box">
+            <img src="Nikto.png" class="service-logo">
+            <h3>Nikto</h3>
+            <p>Nikto a web server scanner that performs comprehensive checks for potential security vulnerabilities, outdated software versions, and misconfigurations.</p>
+          </div>
+        </a>
+
+      </div>
+
+
+
+
+        
+        
+   
+    </section>
+  </main>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69dc11cf9043e11c35333d15/1jm1qb500';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+  <script src="main.js"></script>
+</body>
+</html>
